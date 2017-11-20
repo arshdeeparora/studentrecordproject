@@ -3,3 +3,12 @@
 h1 {
     color: blue;
 }
+.jumbotron text-center{
+	background:#300 !important
+}
+.jumbotron{
+	background:#FF9 !important
+}
+.jumbotron text-center{
+	background:#9FF !important
+}
