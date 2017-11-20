@@ -1,0 +1,113 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Student Details</title>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <link rel="stylesheet" type="text/css" href="mystyle.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	        <script src="main.js"></script>    
+</head>
+	<div style="background:#300 !important" class="jumbotron text-center">
+		<h1 style="color:#0F9";>Student Details Management Portal</h1>
+	</div>
+	<div class ="container">
+			<!--<div>--><div style="background:#FF9 !important" class="jumbotron">
+		<center>	<a href="#demo1" class="btn btn-danger btn-lg" data-toggle="collapse">Add Student Details</a></center>
+  <div id="demo1" class="collapse">
+		<font color="red">
+        <form id="form1">
+  
+  <table width="400"><tr><td>
+     
+    Name:</td><td> <input type="text" id="firstname" name="firstname" placeholder="Enter First Name" size="35" required /></td></tr><tr><td><br></td></tr>
+  
+     <tr><td> 
+   
+    <tr><td>
+    Roll No:</td><td> <input type="tel" id="tel" name="tel" pattern="\d{10}" placeholder="Enter roll no."  size="35" required /></td></tr><tr><td><br></td></tr>
+
+    <tr><td>
+    Stream:</td><td> <input type="text" id="stream" name="stream" placeholder="Enter Stream" size="35" required /></td></tr><tr><td><br></td></tr>
+
+     <tr><td>
+    Passout Year:</td><td> <input type="tel" id="tell" name="tel" pattern="\d{4}" placeholder="Enter passout year" size="35" required /></td></tr><tr><td></td></tr>
+  </table><br>
+   <div id="add" style="padding:30px;">
+<button type="button" id = "ad" class="btn btn-danger btn-lg" onclick = "add_row()">Add Row</button><!--class="btn btn-success btn-lg" -->
+</div>
+</form>
+</font>
+		</div>
+	</div>
+	
+	<div style="background:#9FF !important" class="jumbotron text-center">
+	<a href="#demo" class="btn btn-primary btn-lg" data-toggle="collapse">Show Student Details</a>
+  <div id="demo" class="collapse">
+	
+	<h2 style="color:blue;"><center>Student Details</center></h2>
+<font color="blue">
+<table class="table table-hover" id="data_table">
+<tr>
+<th><center>Name</center></th>
+
+<th><center>Roll Number</center></th>
+<th><center>Stream</center></th>
+<th><center>Passout year</center></th>
+</tr>
+
+<tr id="row1">
+<td id="fname_row1">abc</td>
+
+<td id="roll_row1">1</td>
+<td id="stream_row1">cse</td>
+<td id="pass_row1">2016</td>
+<td>
+<input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit('1')">
+<input type="button" id="save_button1" value="Save" class="save" onclick="save('1')">
+<input type="button" value="Delete" class="delete" onclick="del('1')">
+<input type="checkbox" id="1" onclick = "checkOn(1)">
+</td>
+</tr>
+
+<tr id="row2">
+<td id="fname_row2">def</td>
+
+<td id="roll_row2">2</td>
+<td id="stream_row2">mech</td>
+<td id="pass_row2">2017</td>
+<td>
+<input type="button" id="edit_button2" value="Edit" class="edit" onclick="edit('2')">
+<input type="button" id="save_button2" value="Save" class="save" onclick="save('2')">
+<input type="button" value="Delete" class="delete" onclick="del('2')">
+<input type="checkbox" id="2" onclick = "checkOn(2)">
+</td>
+</tr>
+
+<tr id="row3">
+<td id="fname_row3">xyz</td>
+
+<td id="roll_row3">3</td>
+<td id="stream_row3">HM</td>
+<td id="pass_row3">2018</td>
+<td>
+<input type="button" id="edit_button3" value="Edit" class="edit" onclick="edit('3')">
+<input type="button" id="save_button3" value="Save" class="save" onclick="save('3')">
+<input type="button" value="Delete" class="delete" onclick="del('3')">
+<input type="checkbox" id="3" onclick = "checkOn(3)">
+</td>
+</tr>
+
+
+</table>
+</font>
+<!--<input type="button" class="muldel" id="delml" onclick="delmul()" value="Delete Multiple Row">
+-->	 <div id="mul" style="padding:30px;">
+<button type="button" id = "delml" class="btn btn-primary btn-lg" onclick = "delmul()">Delete Multiple Row</button><!--class="btn btn-success btn-lg" -->
+</div>
+	 </div>
+	</div>
+</body>
+</html>
